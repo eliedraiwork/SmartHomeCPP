@@ -10,10 +10,24 @@
 #define _EVENT_H
 
 #include <ctime>
+#include <string>
 
 
 namespace event
 {
+  /**
+   * Enumeration EventType
+   * @doc:
+   * As enumeration, list different type of events
+   */
+  enum EventType
+  {
+    TEMPERATURE,
+    MOVEMENT,
+    NOISE_LEVEL
+  };
+
+
   /**
    * Class Event
    * @doc:
@@ -22,9 +36,52 @@ namespace event
   class Event
   {
   public:
+    /////////////////////////////////////
+    ///////////  CONSTRUCTORS ///////////
+    /////////////////////////////////////
+
+    /**
+     * Constructor
+     * @param p_sender(int): id of the sender
+     * @param p_location(std::string): location of the event
+     * @param p_type(EventType): type of the event
+     * @param p_payload(std::string): optionnal, additionnal data about the event
+     */
+    Event(
+      int p_sender,
+      std::string p_location,
+      EventType p_type,
+      std::string p_payload
+    );
+
+    /////////////////////////////////////
+    /////////////  GET/SET //////////////
+    /////////////////////////////////////
+    std::time_t timestamp();
+    int sender();
+    std::string location();
+    EventType type();
+    std::string payload();
 
   private:
+    /////////////////////////////////////
+    //////////////  FIELDS //////////////
+    /////////////////////////////////////
+    std::time_t timestamp;
+    int sender;
+    std::string location;
+    EventType type;
+    std::string payload;
 
+    /////////////////////////////////////
+    ///////////  CONSTRUCTORS ///////////
+    /////////////////////////////////////
+
+    /**
+     * Default Constructor
+     * Private access
+     */
+    Event();
   };
 }
 
