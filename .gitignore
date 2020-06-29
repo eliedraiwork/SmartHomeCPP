@@ -1,0 +1,4 @@
+# Ignore build, bin and lib
+build
+bin/*
+lib/*
