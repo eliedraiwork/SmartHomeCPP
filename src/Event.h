@@ -35,6 +35,26 @@ namespace event
    */
   class Event
   {
+
+  private:
+    /////////////////////////////////////
+    //////////////  FIELDS //////////////
+    /////////////////////////////////////
+    std::time_t timestamp;
+    int sender;
+    std::string location;
+    EventType type;
+    std::string payload;
+
+    /////////////////////////////////////
+    ///////////  CONSTRUCTORS ///////////
+    /////////////////////////////////////
+
+    /**
+     * Default Constructor
+     * Private access
+     */
+    Event();
   public:
     /////////////////////////////////////
     ///////////  CONSTRUCTORS ///////////
@@ -63,25 +83,7 @@ namespace event
     EventType type();
     std::string payload();
 
-  private:
-    /////////////////////////////////////
-    //////////////  FIELDS //////////////
-    /////////////////////////////////////
-    std::time_t timestamp;
-    int sender;
-    std::string location;
-    EventType type;
-    std::string payload;
 
-    /////////////////////////////////////
-    ///////////  CONSTRUCTORS ///////////
-    /////////////////////////////////////
-
-    /**
-     * Default Constructor
-     * Private access
-     */
-    Event();
   };
 }
 
