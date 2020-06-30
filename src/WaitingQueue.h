@@ -15,68 +15,68 @@
 
 namespace event
 {
-  /**
-   * Class WaitingQueue
-   * @doc:
-   * Intends to represent a queue of event to treat
-   * Singleton pattern
-   */
-  class WaitingQueue : public tools::IUncopyable
-  {
-  private:
     /**
-     * Singleton concretization
+     * Class WaitingQueue
+     * @doc:
+     * Intends to represent a queue of event to treat
+     * Singleton pattern
      */
-    static WaitingQueue instance;
+    class WaitingQueue : public tools::IUncopyable
+    {
+    private:
+        /**
+         * Singleton concretization
+         */
+        static WaitingQueue instance;
 
-    /////////////////////////////////////
-    ////////////  CONSTRUCTOR ///////////
-    /////////////////////////////////////
+        /////////////////////////////////////
+        ////////////  CONSTRUCTOR ///////////
+        /////////////////////////////////////
 
-    /**
-     *  Default constructor
-     *  Private access
-     */
-    WaitingQueue();
+        /**
+         *  Default constructor
+         *  Private access
+         */
+        WaitingQueue();
 
-    /////////////////////////////////////
-    //////////////  FIELDS //////////////
-    /////////////////////////////////////
-    std::queue<event::Event> events;
+        /////////////////////////////////////
+        //////////////  FIELDS //////////////
+        /////////////////////////////////////
+        std::queue<event::Event> events;
 
-  public:
-    /**
-     * Singleton concretization
-     */
-    static WaitingQueue& instance();
+    public:
+        /**
+         * Singleton concretization
+         */
+        static WaitingQueue& getInstance();
 
-    /////////////////////////////////////
-    //////////////  METHODS /////////////
-    /////////////////////////////////////
+        /////////////////////////////////////
+        //////////////  METHODS /////////////
+        /////////////////////////////////////
 
-    /**
-     *  Dequeue function
-     *  Remove from the queue the next event to process
-     *  Handle the empty queue case
-     *  @return the next event in the WaitingQueue
-     */
-    event::Event& dequeue();
+        /**
+         *  Dequeue function
+         *  Remove from the queue the next event to process
+         *  Handle the empty queue case
+         *  @return the next event in the WaitingQueue
+         */
+        event::Event& dequeue();
 
-    /**
-     *  Enqueue function
-     *  Enqueue an event into the waiting waiting queue
-     */
-     void enqueue(const event::Event p_event);
+        /**
+         *  Enqueue function
+         *  Enqueue an event into the waiting waiting queue
+         */
+        void enqueue(const event::Event p_event);
 
-    /**
-     *  Empty function
-     *  Check if the queue is empty
-     *  @return true if the queue is empty, false otherwise
-     */
-    bool empty();
+        /**
+         *  Empty function
+         *  Check if the queue is empty
+         *  @return true if the queue is empty, false otherwise
+         */
+        bool empty() const;
 
 
-  };
+    };
 }
 
 #endif

@@ -10,35 +10,35 @@ using namespace event;
 
 
 Event::Event(
-  int p_sender,
-  std::string p_location,
-  EventType p_type,
-  std::string p_payload):
+    int p_sender,
+    std::string p_location,
+    EventType p_type,
+    std::string p_payload) :
     sender(p_sender), location(p_location), type(p_type), payload(p_payload)
 {
-  timestamp = std::time(nullptr);
+    timestamp = std::time(nullptr);
 }
 
 Event::Event() { }
 
 
-std::time_t Event::timestamp()
+std::time_t Event::getTimestamp()
 {
-  return timestamp;
+    return timestamp;
 }
-int Event::sender()
+int Event::getSender()
 {
-  return sender;
+    return sender;
 }
-std::string Event::location()
+std::string Event::getLocation()
 {
-  return location;
+    return location;
 }
-EventType Event::type()
+EventType Event::getType()
 {
-  return type;
+    return type;
 }
-std::string Event::payload()
+std::string Event::getPayload()
 {
-  return payload;
+    return payload;
 }

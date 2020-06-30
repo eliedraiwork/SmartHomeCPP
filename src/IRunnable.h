@@ -11,22 +11,22 @@
 
 namespace tools
 {
-  /**
-   * Class IRunnable
-   * @doc:
-   * This class intends to describe all autonomous instances in the program
-   * All this instances should have access to a run function which is defined
-   * in the IRunnable class
-   */
-  class IRunnable
-  {
-  public:
-
     /**
-     * Function to run a specific action
+     * Class IRunnable
+     * @doc:
+     * This class intends to describe all autonomous instances in the program
+     * All this instances should have access to a run function which is defined
+     * in the IRunnable class
      */
-    virtual void run() = 0;
-  };
+    class IRunnable
+    {
+    public:
+
+        /**
+         * Function to run a specific action
+         */
+        virtual void run() = 0;
+    };
 }
 
 

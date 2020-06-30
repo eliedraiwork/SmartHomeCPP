@@ -31,7 +31,6 @@
 *.out
 *.app
 
-# Ignore build, bin and lib
+# Ignore build, and bin
 build
 bin/*
-lib/*

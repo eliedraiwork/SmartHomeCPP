@@ -7,6 +7,7 @@
 */
 
 #include "IUncopyable.h"
+using namespace tools;
 
 IUncopyable::IUncopyable(const IUncopyable& uncopyable)
 {
@@ -14,7 +15,7 @@ IUncopyable::IUncopyable(const IUncopyable& uncopyable)
 }
 
 
-IUncopyable::IUncopyable& operator=(const IUncopyable& uncopyable)
+IUncopyable& IUncopyable::operator=(IUncopyable& const uncopyable)
 {
-  return uncopyable;
+	return uncopyable;
 }

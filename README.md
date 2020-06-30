@@ -6,3 +6,5 @@ A building is known as *smart* when it has the ability to collect data from envi
 Our goal is to build a platform which will provide access, and management of this hardware.
 
 ## Design
+
+### Entities

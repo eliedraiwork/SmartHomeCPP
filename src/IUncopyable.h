@@ -10,19 +10,19 @@
 
 namespace tools
 {
-  /**
-   * Class IUncopyable
-   * @doc:
-   * This class intends to define all the instances in the Project
-   * which will be uncopyable
-   * To do so, make the copy-constructor and the '=' operator to be private.
-   */
-  class IUncopyable
-  {
-  private:
-    IUncopyable(const IUncopyable&);
-    IUncopyable& operator=(const IUncopyable&);
-  };
+    /**
+     * Class IUncopyable
+     * @doc:
+     * This class intends to define all the instances in the Project
+     * which will be uncopyable
+     * To do so, make the copy-constructor and the '=' operator to be private.
+     */
+    class IUncopyable
+    {
+    private:
+        IUncopyable(const IUncopyable&);
+        IUncopyable& operator=(IUncopyable& const);
+    };
 }
 
 
