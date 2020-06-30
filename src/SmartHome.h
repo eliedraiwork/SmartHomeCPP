@@ -18,14 +18,15 @@ class SmartHome : public tools::IUncopyable
 public:
   /***/
   static SmartHome& getInstance();
+  void buildConfiguration();
 
 private:
   /***/
   SmartHome();
 
   static SmartHome instance;
-  std::vector<home::Sensor> sensors;
-  std::vector<home::Controller> controllers;
+  std::vector<home::Sensor*> sensors;
+  std::vector<home::Controller*> controllers;
 };
 
 #endif
