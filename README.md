@@ -9,6 +9,7 @@ Our goal is to build a platform which will provide access, and management of thi
 
 ### Entities
 
+* SmartHome
 * Agent
 * Sensor
 * Controller
