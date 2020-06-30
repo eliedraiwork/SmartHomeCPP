@@ -9,9 +9,9 @@ Our goal is to build a platform which will provide access, and management of thi
 
 ### Entities
 
-*Agent
-*Sensor
-*Controller
-*Dispatcher
-*Event
-*WaitingQueue
+* Agent
+* Sensor
+* Controller
+* Dispatcher
+* Event
+* WaitingQueue
