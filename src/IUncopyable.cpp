@@ -15,7 +15,7 @@ IUncopyable::IUncopyable(const IUncopyable& uncopyable)
 }
 
 
-IUncopyable& IUncopyable::operator=(IUncopyable& const uncopyable)
+IUncopyable& IUncopyable::operator=(const IUncopyable& uncopyable)
 {
-	return uncopyable;
+	return *this;
 }

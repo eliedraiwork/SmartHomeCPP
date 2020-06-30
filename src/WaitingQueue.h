@@ -11,6 +11,7 @@
 
 #include "IUncopyable.h"
 #include "Event.h"
+#include "Mutex.h"
 #include <queue>
 
 namespace event
@@ -43,6 +44,7 @@ namespace event
         //////////////  FIELDS //////////////
         /////////////////////////////////////
         std::queue<event::Event> events;
+        sync::Mutex mutex;
 
     public:
         /**
@@ -60,7 +62,7 @@ namespace event
          *  Handle the empty queue case
          *  @return the next event in the WaitingQueue
          */
-        event::Event& dequeue();
+        Event dequeue();
 
         /**
          *  Enqueue function

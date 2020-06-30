@@ -19,9 +19,11 @@ namespace tools
      */
     class IUncopyable
     {
+    protected:
+      IUncopyable();
     private:
-        IUncopyable(const IUncopyable&);
-        IUncopyable& operator=(IUncopyable& const);
+      IUncopyable(const IUncopyable&);
+      IUncopyable& operator=(const IUncopyable&);
     };
 }
 

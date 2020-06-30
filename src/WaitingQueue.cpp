@@ -19,24 +19,28 @@ WaitingQueue& WaitingQueue::getInstance()
   return instance;
 }
 
-Event& WaitingQueue::dequeue()
+WaitingQueue::WaitingQueue() { }
+
+Event WaitingQueue::dequeue()
 {
-  if(this.empty())
+  if(empty())
     throw "Error: waiting queue is empty";
 
-  lock(&mutex);
-  Event ev = events.pop();
-  unlock(&mutex);
+  mutex.lock();
+
+  Event ev = events.front();
+  events.pop();
+
+  mutex.unlock();
 
   return ev;
-
 }
 
 void WaitingQueue::enqueue(const event::Event p_event)
 {
-  lock(&mutex);
+  mutex.lock();
   events.push(p_event);
-  unlock(&mutex);
+  mutex.unlock();
 }
 
 bool WaitingQueue::empty() const
