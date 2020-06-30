@@ -17,7 +17,7 @@ namespace home
   class Subscriber
   {
   public:
-    virtual void subscribe(event::EventType p_eventType);
+    virtual void subscribe(event::EventType p_eventType) = 0;
   };
 }
 
