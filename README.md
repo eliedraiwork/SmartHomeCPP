@@ -1,4 +1,4 @@
-# SmartHomeCPP
+# Smart Home CPP
 Describe a smart home with autonomous running sensors and controllers.
 
 ## Brief project description
@@ -8,3 +8,10 @@ Our goal is to build a platform which will provide access, and management of thi
 ## Design
 
 ### Entities
+
+*Agent
+*Sensor
+*Controller
+*Dispatcher
+*Event
+*WaitingQueue
