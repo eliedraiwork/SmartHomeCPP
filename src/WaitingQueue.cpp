@@ -21,7 +21,7 @@ WaitingQueue& WaitingQueue::getInstance()
 
 WaitingQueue::WaitingQueue() { }
 
-Event WaitingQueue::dequeue()
+Event WaitingQueue::pop()
 {
   if(empty())
     throw "Error: waiting queue is empty";
@@ -36,7 +36,7 @@ Event WaitingQueue::dequeue()
   return ev;
 }
 
-void WaitingQueue::enqueue(const event::Event p_event)
+void WaitingQueue::push(const event::Event p_event)
 {
   mutex.lock();
   events.push(p_event);

@@ -16,8 +16,7 @@
 namespace sync
 {
 
-  enum ThreadState
-  {
+  enum ThreadState {
     NEW,
     RUN,
     WAIT,

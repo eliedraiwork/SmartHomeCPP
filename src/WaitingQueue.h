@@ -62,13 +62,13 @@ namespace event
          *  Handle the empty queue case
          *  @return the next event in the WaitingQueue
          */
-        Event dequeue();
+        Event pop();
 
         /**
          *  Enqueue function
          *  Enqueue an event into the waiting waiting queue
          */
-        void enqueue(const event::Event p_event);
+        void push(const event::Event p_event);
 
         /**
          *  Empty function
